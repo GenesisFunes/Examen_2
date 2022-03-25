@@ -48,8 +48,9 @@
             // 
             // UsuarioTextBox
             // 
+            this.UsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UsuarioTextBox.Location = new System.Drawing.Point(88, 32);
-            this.UsuarioTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UsuarioTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(268, 22);
             this.UsuarioTextBox.TabIndex = 1;
@@ -66,8 +67,9 @@
             // 
             // ClaveTextBox
             // 
+            this.ClaveTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ClaveTextBox.Location = new System.Drawing.Point(88, 72);
-            this.ClaveTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClaveTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ClaveTextBox.Name = "ClaveTextBox";
             this.ClaveTextBox.Size = new System.Drawing.Size(268, 22);
             this.ClaveTextBox.TabIndex = 3;
@@ -76,7 +78,7 @@
             // 
             this.AceptarButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.AceptarButton.Location = new System.Drawing.Point(66, 129);
-            this.AceptarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AceptarButton.Margin = new System.Windows.Forms.Padding(4);
             this.AceptarButton.Name = "AceptarButton";
             this.AceptarButton.Size = new System.Drawing.Size(112, 28);
             this.AceptarButton.TabIndex = 4;
@@ -88,7 +90,7 @@
             // 
             this.CancelarButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelarButton.Location = new System.Drawing.Point(279, 129);
-            this.CancelarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CancelarButton.Margin = new System.Windows.Forms.Padding(4);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(112, 28);
             this.CancelarButton.TabIndex = 5;
@@ -99,6 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(414, 192);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.AceptarButton);
@@ -107,7 +110,7 @@
             this.Controls.Add(this.UsuarioTextBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Form1";
             this.ResumeLayout(false);
