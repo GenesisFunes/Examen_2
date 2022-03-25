@@ -198,6 +198,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPedido";
             this.Text = "FrmPedido";
+            this.Load += new System.EventHandler(this.FrmPedido_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallePedidoDataGridView)).EndInit();

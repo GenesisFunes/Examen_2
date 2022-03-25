@@ -38,7 +38,9 @@ namespace Examen2Parcial
                 return;
             }
 
-            
+            FrmMenu frmMenu = new FrmMenu();
+            frmMenu.Show();
+            this.Hide();
         }
     }
 }

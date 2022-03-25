@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,11 @@ namespace Examen2Parcial
             InitializeComponent();
         }
 
-        
+        Pedido pedido = new Pedido();
+
+        private void FrmPedido_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
