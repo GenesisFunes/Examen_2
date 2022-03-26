@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GuardarPedidoButton = new System.Windows.Forms.Button();
+            this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.TotalPagarTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.PrecioUnitarioPedidoTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CantidadPedidoTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.DescripcionPedidoTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.NombreClienteTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.CantidadPedidoTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.PrecioUnitarioPedidoTextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TotalPagarTextBox = new System.Windows.Forms.TextBox();
             this.DetallePedidoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.GuardarPedidoButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallePedidoDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.GuardarPedidoButton);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.FechaDateTimePicker);
             this.groupBox1.Controls.Add(this.TotalPagarTextBox);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.PrecioUnitarioPedidoTextBox);
@@ -70,6 +70,80 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pedido";
+            // 
+            // GuardarPedidoButton
+            // 
+            this.GuardarPedidoButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.GuardarPedidoButton.Location = new System.Drawing.Point(143, 141);
+            this.GuardarPedidoButton.Name = "GuardarPedidoButton";
+            this.GuardarPedidoButton.Size = new System.Drawing.Size(128, 32);
+            this.GuardarPedidoButton.TabIndex = 12;
+            this.GuardarPedidoButton.Text = "Guardar pedido";
+            this.GuardarPedidoButton.UseVisualStyleBackColor = false;
+            this.GuardarPedidoButton.Click += new System.EventHandler(this.GuardarPedidoButton_Click);
+            // 
+            // FechaDateTimePicker
+            // 
+            this.FechaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(143, 92);
+            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(225, 21);
+            this.FechaDateTimePicker.TabIndex = 11;
+            // 
+            // TotalPagarTextBox
+            // 
+            this.TotalPagarTextBox.Location = new System.Drawing.Point(531, 146);
+            this.TotalPagarTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.TotalPagarTextBox.Name = "TotalPagarTextBox";
+            this.TotalPagarTextBox.Size = new System.Drawing.Size(225, 22);
+            this.TotalPagarTextBox.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(414, 152);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 16);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Total a pagar:";
+            // 
+            // PrecioUnitarioPedidoTextBox
+            // 
+            this.PrecioUnitarioPedidoTextBox.Location = new System.Drawing.Point(531, 112);
+            this.PrecioUnitarioPedidoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecioUnitarioPedidoTextBox.Name = "PrecioUnitarioPedidoTextBox";
+            this.PrecioUnitarioPedidoTextBox.Size = new System.Drawing.Size(225, 22);
+            this.PrecioUnitarioPedidoTextBox.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(414, 118);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Precio unitario:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 98);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Fecha pedido:";
+            // 
+            // CantidadPedidoTextBox
+            // 
+            this.CantidadPedidoTextBox.Location = new System.Drawing.Point(531, 77);
+            this.CantidadPedidoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.CantidadPedidoTextBox.Name = "CantidadPedidoTextBox";
+            this.CantidadPedidoTextBox.Size = new System.Drawing.Size(225, 22);
+            this.CantidadPedidoTextBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -117,60 +191,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre cliente:";
             // 
-            // CantidadPedidoTextBox
-            // 
-            this.CantidadPedidoTextBox.Location = new System.Drawing.Point(531, 77);
-            this.CantidadPedidoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.CantidadPedidoTextBox.Name = "CantidadPedidoTextBox";
-            this.CantidadPedidoTextBox.Size = new System.Drawing.Size(225, 22);
-            this.CantidadPedidoTextBox.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 98);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Fecha pedido:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(414, 118);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Precio unitario:";
-            // 
-            // PrecioUnitarioPedidoTextBox
-            // 
-            this.PrecioUnitarioPedidoTextBox.Location = new System.Drawing.Point(531, 112);
-            this.PrecioUnitarioPedidoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.PrecioUnitarioPedidoTextBox.Name = "PrecioUnitarioPedidoTextBox";
-            this.PrecioUnitarioPedidoTextBox.Size = new System.Drawing.Size(225, 22);
-            this.PrecioUnitarioPedidoTextBox.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(414, 152);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 16);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Total a pagar:";
-            // 
-            // TotalPagarTextBox
-            // 
-            this.TotalPagarTextBox.Location = new System.Drawing.Point(531, 146);
-            this.TotalPagarTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.TotalPagarTextBox.Name = "TotalPagarTextBox";
-            this.TotalPagarTextBox.Size = new System.Drawing.Size(225, 22);
-            this.TotalPagarTextBox.TabIndex = 10;
-            // 
             // DetallePedidoDataGridView
             // 
             this.DetallePedidoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -178,25 +198,6 @@
             this.DetallePedidoDataGridView.Name = "DetallePedidoDataGridView";
             this.DetallePedidoDataGridView.Size = new System.Drawing.Size(795, 135);
             this.DetallePedidoDataGridView.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 92);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 21);
-            this.dateTimePicker1.TabIndex = 11;
-            // 
-            // GuardarPedidoButton
-            // 
-            this.GuardarPedidoButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.GuardarPedidoButton.Location = new System.Drawing.Point(143, 141);
-            this.GuardarPedidoButton.Name = "GuardarPedidoButton";
-            this.GuardarPedidoButton.Size = new System.Drawing.Size(128, 32);
-            this.GuardarPedidoButton.TabIndex = 12;
-            this.GuardarPedidoButton.Text = "Guardar pedido";
-            this.GuardarPedidoButton.UseVisualStyleBackColor = false;
             // 
             // FrmPedido
             // 
@@ -226,7 +227,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox NombreClienteTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.TextBox TotalPagarTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox PrecioUnitarioPedidoTextBox;

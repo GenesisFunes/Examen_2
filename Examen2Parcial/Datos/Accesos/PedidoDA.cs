@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Datos.Entidades;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -37,6 +38,36 @@ namespace Datos.Accesos
             {
             }
             return listaPedidos;
+        }
+
+
+        public bool InsertarPedido(Pedido pedido)
+        {
+            bool inserto = false;
+            try
+            {
+                string sql = "INSERT INTO pedido VALUES (@NombreCliente, @Descripcion, @Cantidad, @PrecioUnitario, @Total, @FechaPedido);";
+
+                conn = new MySqlConnection(cadena);
+                conn.Open();
+
+                cmd = new MySqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@NombreCliente", pedido.NombreCliente);
+                cmd.Parameters.AddWithValue("@Descripcion", pedido.Descripcion);
+                cmd.Parameters.AddWithValue("@Cantidad", pedido.Cantidad);
+                cmd.Parameters.AddWithValue("@PrecioUnitario", pedido.PrecioUnitario);
+                cmd.Parameters.AddWithValue("@Total", pedido.Total);
+                cmd.Parameters.AddWithValue("@FechaPedido", pedido.FechaPedido);
+                cmd.ExecuteNonQuery();
+                inserto = true;
+
+                conn.Close();
+            }
+            catch (Exception)
+            {
+            }
+            return inserto;
         }
     }
 }

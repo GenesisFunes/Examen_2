@@ -19,7 +19,6 @@ namespace Examen2Parcial
             InitializeComponent();
         }
 
-        Pedido pedido = new Pedido();
         PedidoDA pedidoDA = new PedidoDA();
 
         private void FrmPedido_Load(object sender, EventArgs e)
@@ -31,6 +30,25 @@ namespace Examen2Parcial
         private void ListarPedidos()
         {
             DetallePedidoDataGridView.DataSource = pedidoDA.ListarPedidos();
+        }
+
+        private void GuardarPedidoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Pedido pedido = new Pedido();
+                pedido.NombreCliente = NombreClienteTextBox.Text;
+                pedido.Descripcion = DescripcionPedidoTextBox.Text;
+                pedido.Cantidad = Convert.ToInt32(CantidadPedidoTextBox.Text);
+                pedido.PrecioUnitario = Convert.ToDecimal(PrecioUnitarioPedidoTextBox.Text);
+                pedido.Total = Convert.ToDecimal(TotalPagarTextBox.Text);
+                pedido.FechaPedido = FechaDateTimePicker.Value;
+            }
+            catch (Exception ex)
+            {
+            }
+            
+            
         }
     }
 }
