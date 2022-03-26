@@ -42,12 +42,14 @@
             this.TotalPagarTextBox = new System.Windows.Forms.TextBox();
             this.DetallePedidoDataGridView = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.GuardarPedidoButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallePedidoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.GuardarPedidoButton);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.TotalPagarTextBox);
             this.groupBox1.Controls.Add(this.label6);
@@ -186,6 +188,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(225, 21);
             this.dateTimePicker1.TabIndex = 11;
             // 
+            // GuardarPedidoButton
+            // 
+            this.GuardarPedidoButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.GuardarPedidoButton.Location = new System.Drawing.Point(143, 141);
+            this.GuardarPedidoButton.Name = "GuardarPedidoButton";
+            this.GuardarPedidoButton.Size = new System.Drawing.Size(128, 32);
+            this.GuardarPedidoButton.TabIndex = 12;
+            this.GuardarPedidoButton.Text = "Guardar pedido";
+            this.GuardarPedidoButton.UseVisualStyleBackColor = false;
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -222,5 +234,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox CantidadPedidoTextBox;
         private System.Windows.Forms.DataGridView DetallePedidoDataGridView;
+        private System.Windows.Forms.Button GuardarPedidoButton;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Datos.Entidades;
+﻿using Datos.Accesos;
+using Datos.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,10 +20,17 @@ namespace Examen2Parcial
         }
 
         Pedido pedido = new Pedido();
+        PedidoDA pedidoDA = new PedidoDA();
 
         private void FrmPedido_Load(object sender, EventArgs e)
         {
+            ListarPedidos();
+        }
 
+
+        private void ListarPedidos()
+        {
+            DetallePedidoDataGridView.DataSource = pedidoDA.ListarPedidos();
         }
     }
 }
