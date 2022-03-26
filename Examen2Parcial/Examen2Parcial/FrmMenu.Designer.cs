@@ -33,7 +33,7 @@
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.PedidosToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ListaPedidosToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
@@ -116,7 +116,7 @@
             this.toolStripEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx1.Image = null;
             this.toolStripEx1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PedidosToolStripButton});
+            this.ListaPedidosToolStripButton});
             this.toolStripEx1.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx1.Name = "toolStripEx1";
             this.toolStripEx1.Office12Mode = false;
@@ -124,15 +124,15 @@
             this.toolStripEx1.Size = new System.Drawing.Size(229, 34);
             this.toolStripEx1.TabIndex = 0;
             // 
-            // PedidosToolStripButton
+            // ListaPedidosToolStripButton
             // 
-            this.PedidosToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.PedidosToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PedidosToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("PedidosToolStripButton.Image")));
-            this.PedidosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PedidosToolStripButton.Name = "PedidosToolStripButton";
-            this.PedidosToolStripButton.Size = new System.Drawing.Size(100, 17);
-            this.PedidosToolStripButton.Text = "Lista de pedidos";
+            this.ListaPedidosToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaPedidosToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ListaPedidosToolStripButton.Image")));
+            this.ListaPedidosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ListaPedidosToolStripButton.Name = "ListaPedidosToolStripButton";
+            this.ListaPedidosToolStripButton.Size = new System.Drawing.Size(116, 17);
+            this.ListaPedidosToolStripButton.Text = "Lista de pedidos";
+            this.ListaPedidosToolStripButton.Click += new System.EventHandler(this.ListaPedidosToolStripButton_Click);
             // 
             // toolStripEx2
             // 
@@ -148,18 +148,19 @@
             this.toolStripEx2.Name = "toolStripEx2";
             this.toolStripEx2.Office12Mode = false;
             this.toolStripEx2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.toolStripEx2.Size = new System.Drawing.Size(131, 34);
+            this.toolStripEx2.Size = new System.Drawing.Size(208, 34);
             this.toolStripEx2.TabIndex = 0;
+            this.toolStripEx2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripEx2_ItemClicked);
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(113, 17);
+            this.toolStripButton1.Size = new System.Drawing.Size(129, 17);
             this.toolStripButton1.Text = "Lista de productos";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // FrmMenu
             // 
@@ -167,6 +168,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 295);
             this.Controls.Add(this.ribbonControlAdv1);
+            this.IsMdiContainer = true;
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).EndInit();
@@ -190,6 +192,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem2;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx1;
-        private System.Windows.Forms.ToolStripButton PedidosToolStripButton;
+        private System.Windows.Forms.ToolStripButton ListaPedidosToolStripButton;
     }
 }
